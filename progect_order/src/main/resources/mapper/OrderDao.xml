@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="sclience.dao.OrderDao">
+    <select id="findAllOrdersByUserId" parameterType="String" resultType="sclience.entity.Order">
+      select id,name,create_date createDate
+      from t_order
+      where user_id=#{userId}
+    </select>
+</mapper>
